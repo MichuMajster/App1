@@ -11,5 +11,10 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
