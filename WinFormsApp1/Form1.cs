@@ -14,7 +14,25 @@ namespace WinFormsApp1
 
         private void buttonClick(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+
+            //szerokosc
+            int windowWidth = Size.Width;
+            //wysokosc
+            int windowHeight = Size.Height;
+
+            windowWidth -= button1.Width;
+            windowHeight -= button1.Height;
+
+            Random rnd = new Random();
+            int RandomLeft = rnd.Next(windowWidth);
+
+            int RandomTop = rnd.Next(windowHeight);
+
+            Point topLeftCorner = new Point(RandomLeft, RandomTop);
+            button1.Location = topLeftCorner;
+
+
         }
     }
 }
